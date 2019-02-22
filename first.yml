@@ -1,0 +1,23 @@
+---
+- hosts: web
+  tasks:
+         
+    - name: creating a user
+      user:
+        name: synechron
+        state: present
+        
+    - name: creating a file
+      file:
+        path: /tmp/synechron100
+        state: touch
+        
+    - name: creating a directory
+      file:
+        path: /tmp/synechron100
+        state: directory
+
+    - name: installing a docker
+      apt:
+        pkg: docker.io 
+        state: remove
