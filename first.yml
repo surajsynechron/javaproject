@@ -9,12 +9,12 @@
         
     - name: creating a file
       file:
-        path: /tmp/synechron100
+        path: /tmp/synechron
         state: touch
         
     - name: creating a directory
       file:
-        path: /tmp/synechron100
+        path: /tmp/synechron
         state: directory
 
     - name: installing a docker
